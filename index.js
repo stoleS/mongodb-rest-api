@@ -18,6 +18,7 @@ const app = express();
 
 // Routes
 const users = require("./routes/users");
+const cars = require("./routes/cars");
 
 // Middleware
 app.use(logger("dev"));
@@ -25,6 +26,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use("/users", users);
+app.use("/cars", cars);
 
 // Catch Errors
 app.use((req, res, next) => {
